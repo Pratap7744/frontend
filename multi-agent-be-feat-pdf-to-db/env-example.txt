@@ -1,0 +1,10 @@
+SQLALCHEMY_DATABASE_URI="postgresql://postgres:vano%401234@localhost:5432/multi_agent_db"
+
+FLASK_APP=app.py
+FLASK_ENV=development
+SECRET_KEY=''
+
+DEBUG=True
+
+SMTP_SERVER=
+SMTP_PORT_SSL=
