@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import axios from 'axios';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+// Set base URL for all API requests
+// Update this to match your Flask server URL (likely http://localhost:5000)
+axios.defaults.baseURL = 'http://localhost:5000';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);

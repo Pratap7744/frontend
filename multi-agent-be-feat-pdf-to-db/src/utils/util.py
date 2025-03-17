@@ -120,10 +120,11 @@ def extract_company_names(text):
         return "Unknown Company", "Unknown Company"
         
     except Exception as e:
-        print(f"Error extracting company names: {str(e)}")
+        print("Error extracting company names: {str(e)}")
         return "Unknown Company", "Unknown Company"
 
 def save_document(file, category):
+    os.makedirs('uploads', exist_ok=True)
     filename = secure_filename(file.filename)
     file_path = os.path.join('uploads', filename)
     file.save(file_path)
